@@ -1,0 +1,22 @@
+vim /etc/apt/sources.list
+
+agregar: 
+
+deb http://ftp.debian.org/debian/ wheezy-backports main contrib non-free
+deb-src http://ftp.debian.org/debian/ wheezy-backports main contrib non-free
+
+deb http://mozilla.debian.net/ wheezy-backports iceweasel-release
+deb-src http://mozilla.debian.net/ wheezy-backports iceweasel-release
+
+
+llave pública del repositorio Mozilla backports a apt.
+
+# wget -O- -q http://mozilla.debian.net/archive.asc | apt-key add -
+
+# apt-get update
+
+
+instalar la última versión de Icewasel y su paquete de idiomas.
+En mi caso: l10n-es-es.
+
+# apt-get install -t wheezy-backports iceweasel iceweasel-l10n-es-es
